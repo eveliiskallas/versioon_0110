@@ -329,11 +329,19 @@ main{
 	height: 300px;
 	max-height: 100%;
 	width: 100%;
-	background: #ECEFF1;
+	/* background: #ECEFF1; */
+	overflow: hidden;
 }
-/* .thumbnail--large{
+.thumbnail img {
+	transition: transform .6s ease;
 	height: 480px;
-} */
+}
+.thumbnail:hover img {
+	transform:scale(1.5);
+}
+.thumbnail--large{
+	height: 480px;
+}
 /* .thumbnail:before{
 	content: "";
 	position: absolute;
