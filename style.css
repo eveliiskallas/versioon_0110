@@ -246,6 +246,13 @@ header{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	animation-name: fadeIn;
+	animation-duration: 2s;
+	animation-delay: 3.5s;
+}
+@keyframes fadeIn{
+	0% {opacity: 0;}
+	100%{opacity: 1;}
 }
 
 nav{
@@ -309,7 +316,7 @@ main{
 	animation-fill-mode: forwards;
 	animation-duration: 1s;
 	clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%);
-	animation-timing-function: ease;
+	animation-timing-function: ccubic-bezier(0.25, 0.1, 0.31, 1.03);
 }
 @keyframes clip{
 	0% {clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%);}
