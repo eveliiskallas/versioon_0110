@@ -329,7 +329,7 @@ main{
 	height: 300px;
 	max-height: 100%;
 	width: 100%;
-	/* background: #ECEFF1; */
+	background: #ECEFF1;
 	overflow: hidden;
 }
 .thumbnail img {
