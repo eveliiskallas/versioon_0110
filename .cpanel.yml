@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kallaseveliisikt/public_html/HTMLCSS/2709
+    - export DEPLOYPATH=/home/kallaseveliisikt/public_html/HTMLCSS/0110
     - /bin/cp -R * $DEPLOYPATH
  
