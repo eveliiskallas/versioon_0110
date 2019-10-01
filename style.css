@@ -11,6 +11,65 @@ body{
 	color: #263238;
 }
 
+#loading {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		animation-name: size;
+		animation-duration: 1s;
+		animation-delay: 4s;
+		animation-fill-mode: forwards;
+	}
+	@keyframes size {
+		0%(left: 0%)
+		100{left: 100%}
+	}
+
+#dot {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(147, 219, 248);
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    margin: 10px;
+}
+
+.dot1 {
+    opacity: 0;
+    animation: fade 1s linear;
+    animation-name: loadingscreen;
+    animation-iteration-count: 3;
+}
+.dot2{
+    opacity: 0;
+    animation: fade 1s linear;
+    animation-delay: 0.2s;
+    animation-name: loadingscreen;
+    animation-iteration-count: 3;
+}
+.dot3{
+    opacity: 0;
+    animation: fade 1s linear;
+    animation-delay: 0.4s;
+    animation-name: loadingscreen; 
+    animation-iteration-count: 3;
+}
+
+@keyframes loadingscreen {
+    50% { opacity: 1 }
+    0%, 100% { opacity: 0 }
+}
+
+
 
 /*section/container*/
 
@@ -239,7 +298,17 @@ main{
 	margin: auto;
 	min-height: 400px;
 	background: #CFD8DC;
+	animation-name: fadeIn;
+	animation: fadeIn 1s ease;
 }
+/* @keyframes fadeIn{
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  } */
 .banner__inner{
 	position: relative;
 	margin: auto;
