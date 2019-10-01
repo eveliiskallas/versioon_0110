@@ -331,10 +331,10 @@ main{
 	width: 100%;
 	background: #ECEFF1;
 }
-.thumbnail--large{
+/* .thumbnail--large{
 	height: 480px;
-}
-.thumbnail:before{
+} */
+/* .thumbnail:before{
 	content: "";
 	position: absolute;
 	left: 0;
@@ -345,7 +345,7 @@ main{
 	-webkit-clip-path: polygon(0 100%, 0 80%, 35% 0%, 55% 50%, 65% 25%, 100% 85%, 100% 100%);
 	        clip-path: polygon(0 100%, 0 80%, 35% 0%, 55% 50%, 65% 25%, 100% 85%, 100% 100%);
 	      
-}
+} */
 
 
 
