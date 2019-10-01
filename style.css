@@ -304,17 +304,18 @@ main{
 	margin: auto;
 	min-height: 400px;
 	background: #CFD8DC;
-	animation-name: fadeIn;
-	animation: fadeIn 1s ease;
+	animation-name: clip;
+	animation-delay: 3.6s;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%);
+	animation-timing-function: ease;
 }
-/* @keyframes fadeIn{
-	0% {
-	  opacity:0;
-	}
-	100% {
-	  opacity:1;
-	}
-  } */
+@keyframes clip{
+	0% {clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%);}
+	100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
 .banner__inner{
 	position: relative;
 	margin: auto;
