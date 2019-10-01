@@ -23,7 +23,7 @@ body {
     animation-duration: 1s;
     animation-delay: 3.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    animation-timing-function: cubic-bezier(0.13, 0.54, 0.39, 1.24);
 }
 @keyframes size {
     0% {left: 0%}
