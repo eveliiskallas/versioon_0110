@@ -274,11 +274,6 @@ nav{
 	background: rgba(255,255,255,0.1);
 }
 
-
-
-
-
-
 .logo{
 	position: relative;
 	display: flex;
@@ -426,19 +421,6 @@ main{
 .thumbnail--large{
 	height: 480px;
 }
-/* .thumbnail:before{
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	height: 70%;
-	width: 100%;
-	background: #CFD8DC;
-	-webkit-clip-path: polygon(0 100%, 0 80%, 35% 0%, 55% 50%, 65% 25%, 100% 85%, 100% 100%);
-	        clip-path: polygon(0 100%, 0 80%, 35% 0%, 55% 50%, 65% 25%, 100% 85%, 100% 100%);
-	      
-} */
-
 
 
 /*btn*/
@@ -457,5 +439,38 @@ main{
 }
 .btn--outline:hover{
 	border-color: #03A9F4;
+}
+
+.text_input {
+	position: relative;
+    display: flex;
+    height: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.form{
+	display: grid;
+    position: relative;
+    padding: 15px 15px;
+    width: 15%;
+}
+.form input {
+	width: 300px;
+    height: 40px;
+    border: none;
+}
+.form span {
+	padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.checkbox_div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    left: 30%;
+    padding: 10px 10px;
 }
 
