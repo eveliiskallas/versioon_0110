@@ -25,10 +25,10 @@ body {
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.13, 0.54, 0.39, 1.24);
 }
-@keyframes size {
+/* @keyframes size {
     0% {left: 0%}
     100% {left: 100%}
-}
+} */
 
 #dot {
 height: 20px;
@@ -46,21 +46,21 @@ margin: 10px;
 opacity: 0;
 animation: fade 1s linear;
 animation-name: loadingscreen;
-animation-iteration-count: 3;
+animation-iteration-count: infinite;
 }
 .dot2{
 opacity: 0;
 animation: fade 1s linear;
 animation-delay: 0.2s;
 animation-name: loadingscreen;
-animation-iteration-count: 3;
+animation-iteration-count: infinite;
 }
 .dot3{
 opacity: 0;
 animation: fade 1s linear;
 animation-delay: 0.4s;
 animation-name: loadingscreen; 
-animation-iteration-count: 3;
+animation-iteration-count: infinite;
 }
 
 @keyframes loadingscreen {

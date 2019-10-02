@@ -46,6 +46,7 @@ justify-content: center;
 display: flex;
 align-content: center;
 margin: 10px;
+transform: translate(0px, 340px);
 }
 
 .dot1 {
