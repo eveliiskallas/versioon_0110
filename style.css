@@ -23,7 +23,7 @@ body{
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
 
     animation-name: size;
     animation-duration: 1s;
@@ -256,22 +256,74 @@ header{
 	100%{opacity: 1;}
 }
 
+/*Profile*/
+
+#profile{
+    position: fixed;
+    z-index: 1;
+    align-items: right;
+    display: none;
+	justify-content: flex-end;
+	overflow: hidden;
+}
+
+.profile{
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	background-color: #000;
+	animation-name: menu;
+	animation-timing-function: cubic-bezier(0.25, 0.1, 0.33, 0.9);
+}
+.profile_img{
+	position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: white;
+}
+
 nav{
 	position: relative;
 	display: flex;
 }
-.nav__item{
+.nav__item_container{
+	color: white;
+    justify-content: center;
+    display: grid;
+    font-size: 25p;
+    padding: 10px;
+}
+.nav_item{
 	position: relative;
-	padding:10px 30px;
+    padding: 10px 30px;
 	text-transform: uppercase;
 	cursor: pointer;
-	font-size: 16px;
-	font-weight:500;
-	font-family: "Montserrat";
+	font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat";
 }
-.nav__item:hover,
-.nav__item.active{
+.nav_item:hover{
 	background: rgba(255,255,255,0.1);
+}
+.nav__item{
+    position: relative;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    border-radius: 10%;
+}
+.nav__item:hover{
+	background: #90A4AE;
+}
+.nav__item:active{
+	background-color: #263238;
+}
+.nav__item:active + menu{
+	transition: width ease;	
 }
 
 .logo{

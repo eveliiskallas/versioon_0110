@@ -5,6 +5,15 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".nav__item").click(function(){
+    $("#profile").slideToggle("slide");
+  });
+});
+</script>
 </head>
 <body>
 	<div id="loading">
@@ -13,7 +22,16 @@
 		<span id="dot" class="dot3"></span>
 	</div>
 	<div id="profile">
-
+		<div class="profile">
+			<div class="profile_img">
+					<i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
+			</div>
+			<div class="nav__item_container">
+				<div class="nav_item">Menu item</div>
+				<div class="nav_item">Menu item</div>
+				<div class="nav_item">Menu item</div>
+			</div>
+		</div>
 	</div>
 	<div class="page">
 		<header>
@@ -22,7 +40,7 @@
 			</div>
 			<nav class="margin-left--auto">
 				<div class="nav__item">
-					<i class="fa fa-bars fa-3x" aria-hidden="true"><a href="#"></a></i>
+					<i class="fa fa-bars fa-3x" aria-hidden="true"><a></a></i>
 				</div>
 			</nav>
 		</header>
