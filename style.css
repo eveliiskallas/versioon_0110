@@ -511,10 +511,22 @@ main{
     height: 40px;
     border: none;
 }
-.form span {
-	padding: 10px 0;
-    font-size: 20px;
-    font-weight: bold;
+.form input:focus{
+	text-decoration: none;
+}
+.line {
+	width: 0px;
+	height: 0px;
+}
+
+.form input:focus + .line{
+    width: 300px;
+	height: 2px;
+    position: relative;
+    content: "";
+	border-bottom: solid;
+	color: #2196F3;
+	transition: width .2s ease, .2s ease;
 }
 .checkbox_div{
     position: relative;
@@ -537,13 +549,20 @@ main{
     left: -35px;
     height: 20px;
     width: 20px;
-    background-color: #90A4AE;
+	background-color: #90A4AE;
 }
 .checkbox_div:hover input ~ .checkmark {
 	background-color: #ccc;
 }
 .checkbox_div input:checked ~ .checkmark {
 	background-color: #2196F3;
+	clip-path: circle(75%);
+	animation-name: circle;
+	animation-duration: 0.5s;
 }
   
+@keyframes circle {
+	0% {clip-path:circle(0%)}
+	100% {clip-path:circle(75%)}
+}
   
