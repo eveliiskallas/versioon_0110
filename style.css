@@ -525,4 +525,25 @@ main{
     left: 30%;
     padding: 10px 10px;
 }
-
+.checkbox_div input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.checkmark {
+    position: absolute;
+    left: -35px;
+    height: 20px;
+    width: 20px;
+    background-color: #90A4AE;
+}
+.checkbox_div:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+.checkbox_div input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+  
+  
