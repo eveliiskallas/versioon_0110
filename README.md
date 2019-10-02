@@ -1,3 +1,5 @@
-# versioon_0110
+# versioon_0110_0210
 
-## Test repo, mida kasutati giti kasutamisel käsureal
+## Test repo, mida kasutatakse giti kasutamisel käsureal
+#
+## Ülesannete 0110 ja 0210 repositoorium
