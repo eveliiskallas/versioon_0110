@@ -256,33 +256,6 @@ header{
 	100%{opacity: 1;}
 }
 
-/*Profile*/
-
-#profile{
-    position: fixed;
-    z-index: 1;
-    align-items: right;
-    display: none;
-	justify-content: flex-end;
-	overflow: hidden;
-}
-
-.profile{
-	position: fixed;
-	width: 30%;
-	height: 100%;
-	background-color: #000;
-	animation-name: menu;
-	animation-timing-function: cubic-bezier(0.25, 0.1, 0.33, 0.9);
-}
-.profile_img{
-	position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-    color: white;
-}
-
 nav{
 	position: relative;
 	display: flex;
@@ -306,6 +279,15 @@ nav{
 .nav_item:hover{
 	background: rgba(255,255,255,0.1);
 }
+/*Profile*/
+
+.profile{
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	background-color: #000;
+	visibility: hidden;
+}
 .nav__item{
     position: relative;
     padding: 10px 15px;
@@ -316,15 +298,39 @@ nav{
     font-family: "Montserrat";
     border-radius: 10%;
 }
+.nav_item input {
+	background-color: #03A9F4;
+}
 .nav__item:hover{
 	background: #90A4AE;
 }
-.nav__item:active{
-	background-color: #263238;
+.nav__item input[type=checkbox] {
+	display: none;
+  }
+  
+.nav_item input[type=checkbox]:checked~.remove-check {
+	display: none;
+	position: fixed;
+	z-index: 1;
+  }
+  input[type=checkbox]:checked~#profile {
+	display: flex;
+	position: fixed;
+	z-index: 1;
+  }
+  
+  #profile {
+	display: none;
+  
+  }
+.profile_img{
+	position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: white;
 }
-.nav__item:active + menu{
-	transition: width ease;	
-}
+
 
 .logo{
 	position: relative;
@@ -565,4 +571,57 @@ main{
 	0% {clip-path:circle(0%)}
 	100% {clip-path:circle(75%)}
 }
-  
+
+@media only screen and (max-width:800px){
+	.row{
+		display: block
+	}
+	.col--33{
+		width: 100%;
+	}
+	.col--50{
+		width:100%;
+	}
+	.col--40{
+		width: 100%;
+	}
+	header{
+		justify-content: center;
+	}
+	.banner__inner{
+		width: 100%;
+		justify-content: center;
+		display: grid;
+		align-items: center;
+	}
+	.text_input {
+		display: grid;
+		width: 100%;
+	}
+	.checkbox_div{
+		width: 85%;
+		height: 180px;
+		left: 10%;
+	}
+}
+
+@media only screen and (max-width:1050px){
+	.col--50{
+		width:100%;
+	}
+	.col--40{
+		width: 100%;
+	}
+	.text_input {
+		width: 100%;
+	}
+	.checkbox_div{
+		width: 85%;
+		height: 30%;
+		left: 10%;
+	}
+	.form {
+		padding: 0;
+    	width: 40%;
+	}
+}
