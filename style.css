@@ -279,14 +279,70 @@ nav{
 .nav_item:hover{
 	background: rgba(255,255,255,0.1);
 }
-/*Profile*/
 
+/*Profile*/
+#profile {
+	position: absolute;
+	z-index: 1;
+	display: none;
+	position: absolute;
+    z-index: 1;
+    height: 100%;
+	left: 70%;
+}
+/* checkbox */
+#trigger:checked {
+	width: 60%;
+	animation-name: checked;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes checked{
+	0% {width: 0%}
+	100% {width: 60%}
+}
+
+#trigger:not(:checked) {
+	width: 10%;
+	animation-name: notchecked;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes notchecked{
+	0% {width: 60%}
+	100% {width: 10%}
+}
+/* checkbox */
+
+
+#trigger:checked + #profile{
+	display: block;
+	animation-name: menu;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes menu {
+	0% {left: 100%; }
+	100% {left: 70%; }
+}
+
+ /* #trigger:not(:checked) + #profile{
+	display: none;
+	animation-name: menuu;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes menuu {
+	0% {left: 70%}
+	100% {left: 100%;}
+} */
 .profile{
 	position: fixed;
 	width: 30%;
 	height: 100%;
-	background-color: #000;
-	visibility: hidden;
+	background-color: #000;;
+	display: block
 }
 .nav__item{
     position: relative;
@@ -304,25 +360,7 @@ nav{
 .nav__item:hover{
 	background: #90A4AE;
 }
-.nav__item input[type=checkbox] {
-	display: none;
-  }
   
-.nav_item input[type=checkbox]:checked~.remove-check {
-	display: none;
-	position: fixed;
-	z-index: 1;
-  }
-  input[type=checkbox]:checked~#profile {
-	display: flex;
-	position: fixed;
-	z-index: 1;
-  }
-  
-  #profile {
-	display: none;
-  
-  }
 .profile_img{
 	position: relative;
     display: flex;
