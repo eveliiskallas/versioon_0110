@@ -282,14 +282,27 @@ nav{
 
 /*Profile*/
 #profile {
-	position: absolute;
 	z-index: 1;
-	display: none;
 	position: absolute;
     z-index: 1;
     height: 100%;
 	left: 70%;
+	display:none;
+	
+
 }
+
+
+ /* #trigger:not(:checked) + .profile{
+	animation-name: menuu;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes menuu {
+	0% {clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)}
+	100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)}
+} */
+
 /* checkbox */
 #trigger:checked {
 	width: 60%;
@@ -314,36 +327,26 @@ nav{
 }
 /* checkbox */
 
-
 #trigger:checked + #profile{
 	display: block;
-	animation-name: menu;
-	animation-duration: 1s;
-	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-@keyframes menu {
-	0% {left: 100%; }
-	100% {left: 70%; }
-}
-
- /* #trigger:not(:checked) + #profile{
-	display: none;
-	animation-name: menuu;
-	animation-duration: 1s;
-	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-@keyframes menuu {
-	0% {left: 70%}
-	100% {left: 100%;}
-} */
 .profile{
 	position: fixed;
 	width: 30%;
 	height: 100%;
 	background-color: #000;;
-	display: block
+	display: block;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	animation-name: menu;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+@keyframes menu {
+	0% {clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	}
+	100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)};
+	}
+	
 .nav__item{
     position: relative;
     padding: 10px 15px;
